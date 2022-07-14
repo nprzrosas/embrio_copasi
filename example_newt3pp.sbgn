@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<sbgn xmlns="http://sbgn.org/libsbgn/0.3">
+  <map id="example_newt3pp.sbgn" language="process description">
+    <glyph id="nwtN_8f86ff1c-7b33-492b-bb04-357193330d53" class="compartment">
+      <label text="compartment 1"/>
+      <bbox x="315.375" y="128.375" w="245.25" h="61.25"/>
+    </glyph>
+    <glyph id="nwtN_a64f3cc1-bd89-4041-9e25-fc790bed5ae0" class="macromolecule" compartmentRef="nwtN_8f86ff1c-7b33-492b-bb04-357193330d53">
+      <label text="A"/>
+      <bbox x="331" y="144" w="60" h="30"/>
+    </glyph>
+    <glyph id="nwtN_6aea905a-cc3a-4b6a-b485-1735087acf97" class="macromolecule" compartmentRef="nwtN_8f86ff1c-7b33-492b-bb04-357193330d53">
+      <label text="B"/>
+      <bbox x="485" y="144" w="60" h="30"/>
+    </glyph>
+    <glyph id="nwtN_94455980-5b47-48dc-b4bf-3d8f66960baa" class="process" compartmentRef="nwtN_8f86ff1c-7b33-492b-bb04-357193330d53">
+      <bbox x="423.85714285714283" y="150.85714285714286" w="14.285714285714286" h="14.285714285714286"/>
+      <port id="nwtN_94455980-5b47-48dc-b4bf-3d8f66960baa.1" x="421" y="158"/>
+      <port id="nwtN_94455980-5b47-48dc-b4bf-3d8f66960baa.2" x="441" y="158"/>
+    </glyph>
+    <glyph id="nwtN_eb119d2b-85af-4202-8756-bbaa78d3b269" class="compartment">
+      <label text="compartment 2"/>
+      <bbox x="600.375" y="45.375" w="353.25" h="64.25"/>
+    </glyph>
+    <glyph id="nwtN_de8a5766-1276-4ce9-b1c7-76238486f567" class="macromolecule" compartmentRef="nwtN_eb119d2b-85af-4202-8756-bbaa78d3b269">
+      <label text="C"/>
+      <bbox x="721" y="64" w="60" h="30"/>
+    </glyph>
+    <glyph id="nwtN_682b7129-a45e-456e-8685-76160bdceab9" class="macromolecule" compartmentRef="nwtN_eb119d2b-85af-4202-8756-bbaa78d3b269">
+      <label text="D"/>
+      <bbox x="878" y="61" w="60" h="30"/>
+    </glyph>
+    <glyph id="nwtN_89f0e785-0f45-4a7a-b5ae-82a7187de0ff" class="process" compartmentRef="nwtN_eb119d2b-85af-4202-8756-bbaa78d3b269">
+      <bbox x="618.8571428571429" y="73.85714285714286" w="14.285714285714286" h="14.285714285714286"/>
+      <port id="nwtN_89f0e785-0f45-4a7a-b5ae-82a7187de0ff.1" x="616" y="81"/>
+      <port id="nwtN_89f0e785-0f45-4a7a-b5ae-82a7187de0ff.2" x="636" y="81"/>
+    </glyph>
+    <glyph id="nwtN_ed551d89-83b7-41eb-9539-ff2d6189aea5" class="process" compartmentRef="nwtN_eb119d2b-85af-4202-8756-bbaa78d3b269">
+      <bbox x="816.8571428571429" y="67.85714285714286" w="14.285714285714286" h="14.285714285714286"/>
+      <port id="nwtN_ed551d89-83b7-41eb-9539-ff2d6189aea5.1" x="814" y="75"/>
+      <port id="nwtN_ed551d89-83b7-41eb-9539-ff2d6189aea5.2" x="834" y="75"/>
+    </glyph>
+    <arc id="nwtE_d70cba82-3b11-4e36-a467-4c86b3a819cb" class="consumption" source="nwtN_6aea905a-cc3a-4b6a-b485-1735087acf97" target="nwtN_89f0e785-0f45-4a7a-b5ae-82a7187de0ff.1">
+      <start x="537.2355769230769" y="143.375"/>
+      <end x="615.375" y="81"/>
+    </arc>
+    <arc id="nwtE_9285846a-c91b-452a-83e4-6dc180d6ea17" class="production" source="nwtN_94455980-5b47-48dc-b4bf-3d8f66960baa.2" target="nwtN_6aea905a-cc3a-4b6a-b485-1735087acf97">
+      <start x="441.625" y="158"/>
+      <end x="481.25022141920886" y="158.59821692165724"/>
+    </arc>
+    <arc id="nwtE_85223a58-1790-4242-9ebe-cacf63edf96d" class="consumption" source="nwtN_a64f3cc1-bd89-4041-9e25-fc790bed5ae0" target="nwtN_94455980-5b47-48dc-b4bf-3d8f66960baa.1">
+      <start x="391.625" y="158.5625"/>
+      <end x="420.375" y="158"/>
+    </arc>
+    <arc id="nwtE_6bb2c5e4-25f5-4b0b-aa88-540a486c0a25" class="production" source="nwtN_89f0e785-0f45-4a7a-b5ae-82a7187de0ff.2" target="nwtN_de8a5766-1276-4ce9-b1c7-76238486f567">
+      <start x="636.625" y="81"/>
+      <end x="717.2503999232164" y="79.53999360122853"/>
+    </arc>
+    <arc id="nwtE_751a8757-d5de-452f-abe4-9ab30ea56299" class="consumption" source="nwtN_de8a5766-1276-4ce9-b1c7-76238486f567" target="nwtN_ed551d89-83b7-41eb-9539-ff2d6189aea5.1">
+      <start x="781.625" y="77.32191780821918"/>
+      <end x="813.375" y="75"/>
+    </arc>
+    <arc id="nwtE_1be4dcba-c912-4c9e-b142-c033cae64a07" class="production" source="nwtN_ed551d89-83b7-41eb-9539-ff2d6189aea5.2" target="nwtN_682b7129-a45e-456e-8685-76160bdceab9">
+      <start x="834.625" y="75"/>
+      <end x="874.2502214192089" y="75.59821692165725"/>
+    </arc>
+  </map>
+</sbgn>
